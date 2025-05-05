@@ -1,0 +1,52 @@
+.home-container {
+  text-align: center;
+  padding: 40px;
+  color: #333;
+}
+
+.home-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.home-description {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.data-card {
+  width: 250px;
+  background-color: #ffffff;
+  border: 2px solid #d6e4f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+  .data-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+
+  .data-card h2 {
+    font-size: 22px;
+    color: #1a3f6c;
+  }
+
+  .data-card p {
+    color: #555;
+    font-size: 15px;
+    margin-top: 10px;
+  }

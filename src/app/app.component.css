@@ -1,0 +1,7 @@
+.app-wrapper {
+  background-color: #f4f7fb; /* Soft, neutral background */
+  min-height: 100vh;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1e293b; /* Dark slate for readable text */
+}
