@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,16 +15,15 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule,
 
-    // 👇 Only needed if these components are standalone (Angular 17+)
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    }),
     HeaderComponent,
     ChartComponent,
     DynamicChartComponent,
     HomeComponent,
   ],
-  declarations: [
-    //AppComponent,
-    // Don’t declare standalone components here
-  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
