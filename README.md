@@ -115,6 +115,16 @@ npm install echarts --save
 - Chart would not resize correctly on smaller screens.  
 - Solution: Implemented responsive resizing using `ResizeObserver` and CSS max-width constraints.
 
+## Build Warnings and Bundle Budget
+
+When building the Angular application using the production configuration, the build process failed due to the application bundle exceeding the defined size budget.
+
+
+
+
+
+
+
 ---
 
 ## How to Use
