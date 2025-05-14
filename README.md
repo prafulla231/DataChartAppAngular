@@ -1,59 +1,155 @@
-# DataChartAppAngular
+# Angular Data Visualization App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+This project is a responsive and interactive web application built using Angular and Apache ECharts. It visualizes both static and dynamic productivity data using rich, animated charts. The app is designed to be clean, visually appealing, and easy to extend.
 
-## Development server
+---
 
-To start a local development server, run:
+## Overview
+
+This application demonstrates how Angular can be used with ECharts to build a robust, component-based data visualization platform. It includes two primary modes:
+
+- **Static Data View**: Displays predefined datasets.
+- **Dynamic Data View**: Pulls real-time data from external APIs.
+
+---
+
+## Features
+
+- Dynamic charts built with Apache ECharts  
+- Clean, modern, and responsive UI  
+- Supports static and real-time data visualizations  
+- Modular Angular component structure  
+- Integration tips for tools like GitHub, and TodoList
+
+---
+
+## Project Setup
+
+Follow these steps to get the app running locally:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/angular-data-visualization-app.git
+cd angular-data-visualization-app
+```
+
+### 2. Install dependencies
+
+Make sure you have Node.js and Angular CLI installed, then run:
+
+```bash
+npm install
+```
+
+### 3. Run the application
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser and visit `http://localhost:4200` to view the app.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Components Overview
 
-```bash
-ng generate component component-name
-```
+### AppComponent
+- Root component  
+- Manages layout and router outlet
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### HeaderComponent
+- Displays the hero section with project title, description, and a visual banner  
+- Includes responsive image animation and headline
 
-```bash
-ng generate --help
-```
+### HomeComponent
+- Landing page of the app  
+- Contains navigation cards for "Static Data" and "Dynamic Data" views  
+- Displays a tip section at the bottom for productivity tool integration
 
-## Building
+### StaticDataComponent
+- Shows ECharts visualizations based on hardcoded or locally stored datasets
 
-To build the project run:
+### DynamicDataComponent
+- Fetches live data from an API (e.g., JSONPlaceholder or your own endpoint)  
+- Displays real-time updates with chart transitions and error handling
 
-```bash
-ng build
-```
+### ChartComponent
+- A reusable ECharts wrapper component  
+- Accepts chart configuration and renders the corresponding visualization
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## ECharts Integration
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+1. Install ECharts via npm:
 
 ```bash
-ng e2e
+npm install echarts --save
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
+## Challenges Faced
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Image Path Issues
+- Images initially failed to load due to incorrect paths.  
+- Solution: Reorganized assets and updated `angular.json` to include:
+
+```json
+"assets": [
+  {
+    "glob": "**/*",
+    "input": "src/assets",
+    "output": "/assets"
+  }
+]
+```
+
+
+
+### API Integration
+- Handled errors from unavailable or unstable endpoints.  
+- Used `HttpClient` with proper loading states and fallback UI messages.
+
+### Chart Responsiveness
+- Chart would not resize correctly on smaller screens.  
+- Solution: Implemented responsive resizing using `ResizeObserver` and CSS max-width constraints.
+
+---
+
+## How to Use
+
+1. Clone and install the application using the steps above.
+
+2. Use the homepage navigation to explore:
+   - **Static Data**: Predefined chart views
+   - **Dynamic Data**: Real-time API visualizations
+
+3. You can modify the API URL or data in the respective components (`dynamic-data.component.ts`, `static-data.component.ts`) to connect your own data sources.
+
+4. Optional: Extend integration with external tools like Todoist or GitHub by adding OAuth or public APIs in the `DynamicDataComponent`.
+
+---
+
+## Folder Structure
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── header/
+│   │   ├── home/
+│   │   ├── static-data/
+│   │   ├── dynamic-data/
+│   │   └── shared/chart/
+│   ├── assets/
+│   │   └── images/
+│   ├── app.module.ts
+│   └── app-routing.module.ts
+├── index.html
+├── styles.css
+```
+
+---
+
+
