@@ -1,52 +1,206 @@
-.home-container {
-  text-align: center;
-  padding: 40px;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #faf4f0; /* Soft, light peach background */
   color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
-.home-title {
-  font-size: 32px;
+/* Home Container */
+.home-container {
+  padding: 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-banner {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #F8D7D0, #F3E4D4); /* Soft peach gradient */
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  color: #5d3a2e;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: rgba(93, 58, 46, 0.8); /* Softer text color */
+}
+
+.get-started-btn {
+  background-color: #ff8a5c; /* Warm coral tone */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
   font-weight: bold;
-  color: #003366;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+  .get-started-btn:hover {
+    background-color: #ff6f47; /* Slightly darker coral */
+    transform: translateY(-5px);
+  }
+
+/* Home Description */
 .home-description {
-  font-size: 16px;
-  margin-bottom: 40px;
-  color: #555;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #444;
+  line-height: 1.8;
 }
 
+/* Card Section */
 .card-container {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-around;
+  gap: 2rem;
   flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
 .data-card {
-  width: 250px;
-  background-color: #ffffff;
-  border: 2px solid #d6e4f0;
+  background-color: white;
+  padding: 2.5rem;
+  width: 350px; /* Increased width of cards */
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  padding: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Larger shadow for depth */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  text-align: center;
+  animation: fadeInUp 0.5s ease-in-out;
 }
 
   .data-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   }
 
-  .data-card h2 {
-    font-size: 22px;
-    color: #1a3f6c;
+.card-icon {
+  font-size: 3.5rem;
+  color: #f68f58; /* Warm orange for card icons */
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #5d3a2e; /* Soft brown for titles */
+}
+
+.card-description {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1rem;
+  color: #666;
+}
+
+.card-action {
+  font-weight: bold;
+  color: #f68f58; /* Matches card icon color */
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+  .card-action:hover {
+    color: #d87441; /* Darker shade of orange */
   }
 
-  .data-card p {
-    color: #555;
-    font-size: 15px;
-    margin-top: 10px;
+/* Tips Section */
+.tips-section {
+  background-color: #ffebd4; /* Light peach background */
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tip-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tip-icon {
+  font-size: 2.5rem;
+  color: #f68f58; /* Consistent warm color */
+}
+
+.tip-text {
+  max-width: 600px;
+}
+
+.tip-message {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #5d3a2e; /* Soft brown for text */
+  margin-bottom: 1rem;
+}
+
+.integration-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  justify-content: center;
+}
+
+  .integration-list li a {
+    color: #f68f58; /* Consistent color with icon */
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
+
+    .integration-list li a:hover {
+      color: #d87441; /* Darker orange shade */
+      text-decoration: underline;
+    }
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

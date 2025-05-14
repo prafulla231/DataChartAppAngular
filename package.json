@@ -17,6 +17,7 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
+    "data-chart-app-angular": "file:",
     "echarts": "^5.6.0",
     "jest-editor-support": "*",
     "ngx-echarts": "^19.0.0",

@@ -1,18 +1,52 @@
 <div class="home-container">
-  <h1 class="home-title">Exploring Angular Fundamentals and Data Visualization with ECharts</h1>
+  <!-- Hero Section -->
+  <section class="hero-banner">
+    <h1 class="hero-title">Boost Your Productivity with Angular Insights</h1>
+    <p class="hero-subtitle">
+      Unlock powerful visualizations using modern charting tools and real-time data integrations.
+    </p>
+    <!--<button class="get-started-btn" (click)="navigateTo('static')">🚀 Get Started</button>-->
+  </section>
+
+  <!-- Description -->
   <p class="home-description">
-    Dive into Angular’s architecture and visualize your daily productivity using static and dynamic data sources.
+    Explore the architecture of Angular while transforming your productivity into vibrant, interactive charts using both static datasets and live API feeds.
   </p>
 
+  <!-- Card Section -->
   <div class="card-container">
+    <!-- Static Data Card -->
     <div class="data-card" (click)="navigateTo('static')">
-      <h2>📊 Static Data</h2>
-      <p>Visualize pre-defined productivity data using ECharts.</p>
+      <div class="card-icon">📊</div>
+      <h2 class="card-title">Static Data</h2>
+      <p class="card-description">Dive into curated datasets and watch your productivity come to life with ECharts visualizations.</p>
+      <span class="card-action">View Charts →</span>
     </div>
 
+    <!-- Dynamic Data Card -->
     <div class="data-card" (click)="navigateTo('dynamic')">
-      <h2>🔄 Dynamic Data</h2>
-      <p>Fetch and display real-time data from an API source.</p>
+      <div class="card-icon">🔄</div>
+      <h2 class="card-title">Dynamic Data</h2>
+      <p class="card-description">Connect with real-time APIs and get instant updates on your performance metrics.</p>
+      <span class="card-action">Explore Live Data →</span>
     </div>
   </div>
+
+  <!-- Footer or Tip Section -->
+  <footer class="tips-section">
+    <div class="tip-content">
+      <span class="tip-icon">💡</span>
+      <div class="tip-text">
+        <p class="tip-message">
+          Supercharge your insights by connecting tools you already use!
+        </p>
+        <ul class="integration-list">
+          <li><a href="https://checkmark-ten.vercel.app/" target="_blank" rel="noopener">📝 Todoist</a></li>
+          <li><a href="https://www.notion.so" target="_blank" rel="noopener">📒 Notion</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">🐙 GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
 </div>

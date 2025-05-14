@@ -1,21 +1,103 @@
+/* Header Container */
 .header-container {
-  text-align: center;
-  color: #003366;
-  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #ff8a5c 0%, #f3e0d7 100%); /* Soft peach gradient */
+  color: white;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-  .header-container h1 {
-    margin: 0;
-    font-size: 36px;
-    font-weight: bold;
+/* Header Content */
+.header-content {
+  flex: 1 1 60%;
+  max-width: 600px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Main Heading */
+.main-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  color: #5d3a2e; /* Soft brown */
+}
+
+/* Sub Heading */
+.sub-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #000000; 
+}
+
+/* Description Text */
+.description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #000000; 
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta-btn {
+  background-color: white;
+  color: #ff8a5c; /* Warm coral for buttons */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+  .cta-btn:hover {
+    background-color: #f3e0d7; /* Light peach background on hover */
+    transform: translateY(-2px);
   }
 
-  .header-container h2 {
-    font-size: 24px;
-    color: #005580;
+/* Header Graphic Section */
+.header-graphic {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+  .header-graphic img {
+    width: 100%;
+    max-width: 320px;
+    animation: float 3s ease-in-out infinite;
   }
 
-  .header-container p {
-    font-size: 14px;
-    color: #333;
+/* Keyframe Animations */
+
+/* Slide In Animation for Text */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
   }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Float Animation for Image */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}

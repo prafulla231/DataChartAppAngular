@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ChartData } from '../models/chart-data.model';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: 'root' }) //i can use this service all over the application..its global
 export class ChartService {
   getTechUsageData(): ChartData[] {
     return [
