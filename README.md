@@ -27,9 +27,9 @@ This application demonstrates how Angular can be used with ECharts to build a ro
 
 You can try the live version of this application here:
 
-👉 [View Demo](https://your-deployment-link.com)
+👉 [View Demo](https://dataviewangular.netlify.app/)
 
-> Replace the above link with your actual deployed URL (e.g., from Firebase Hosting, Vercel, Netlify, or GitHub Pages).
+
 
 This live demo showcases:
 - Angular component structure in action
