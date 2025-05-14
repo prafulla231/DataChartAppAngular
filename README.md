@@ -23,6 +23,20 @@ This application demonstrates how Angular can be used with ECharts to build a ro
 
 ---
 
+## Live Demo
+
+You can try the live version of this application here:
+
+👉 [View Demo](https://your-deployment-link.com)
+
+> Replace the above link with your actual deployed URL (e.g., from Firebase Hosting, Vercel, Netlify, or GitHub Pages).
+
+This live demo showcases:
+- Angular component structure in action
+- ECharts visualizations using both static and dynamic data
+- Responsive UI with animated cards and tips section
+
+
 ## Project Setup
 
 Follow these steps to get the app running locally:
