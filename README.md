@@ -44,8 +44,9 @@ Follow these steps to get the app running locally:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/angular-data-visualization-app.git
-cd angular-data-visualization-app
+git clone https://github.com/prafulla231/DataChartAppAngular.git
+
+cd DataChartAppAngular
 ```
 
 ### 2. Install dependencies
@@ -149,7 +150,7 @@ When building the Angular application using the production configuration, the bu
    - **Static Data**: Predefined chart views
    - **Dynamic Data**: Real-time API visualizations
 
-3. You can modify the API URL or data in the respective components (`dynamic-data.component.ts`, `static-data.component.ts`) to connect your own data sources.
+3. You can modify the API URL or data in the respective components  to connect your own data sources.
 
 4. Optional: Extend integration with external tools like Todoist or GitHub by adding OAuth or public APIs in the `DynamicDataComponent`.
 
